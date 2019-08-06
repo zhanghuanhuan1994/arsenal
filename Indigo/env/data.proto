@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+
+message Data{
+  required fixed32 seq_num = 1;
+  required fixed32 send_ts = 2;
+  required fixed64 sent_bytes = 3;
+  required fixed32 delivered_time = 4;
+  required fixed64 delivered = 5;
+  required string payload = 6;
+  required fixed32 frame_id = 7;
+  required fixed32 frame_start_packet_seq = 8;
+  required fixed32 frame_end_packet_seq = 9;
+  required double send_time = 10;
+  required fixed32 codec_bitrate = 11;
+}
+
+message Ack{
+  required fixed32 seq_num = 1;
+  required fixed32 send_ts = 2;
+  required fixed64 sent_bytes = 3;
+  required fixed32 delivered_time = 4;
+  required fixed64 delivered = 5;
+  required fixed32 ack_bytes = 6;
+}
